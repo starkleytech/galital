@@ -2,7 +2,7 @@
 authors = ['Dubs <julien.du.bois@starkleytech.com>']
 edition = '2018'
 homepage = 'Runtime for Galital.'
-license = 'Unlicense'
+license = 'GNU v3'
 name = 'galital-runtime'
 repository = 'https://github.com/starkleytech/galital.git'
 version = '3.0.0'
