@@ -23,7 +23,7 @@ use galital_runtime::Block;
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Substrate Node".into()
+		"Galital".into()
 	}
 
 	fn impl_version() -> String {

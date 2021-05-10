@@ -33,6 +33,9 @@ frame-system-benchmarking = { version = "3.0.0", git = "https://github.com/parit
 frame-system-rpc-runtime-api = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 pallet-aura = { git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 pallet-balances = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
+pallet-contracts = { version = "3.0.0", default-features = false, git = "https://github.com/paritytech/substrate", branch = "master" }
+pallet-contracts-primitives = { version = "3.0.0", default-features = false, git = "https://github.com/paritytech/substrate", branch = "master"}
+pallet-contracts-rpc-runtime-api = { version = "3.0.0", default-features = false, git = "https://github.com/paritytech/substrate", branch = "master"}
 pallet-grandpa = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 pallet-randomness-collective-flip = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 pallet-sudo = { git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
@@ -50,12 +53,18 @@ sp-session = { version = "3.0.0", git = "https://github.com/paritytech/substrate
 sp-std = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 sp-transaction-pool = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 sp-version = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
+sp-io = { version = "3.0.0", git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 
 
 # NFT dependencies
 pallet-atomic-swap = { git = "https://github.com/paritytech/substrate", branch = "master", default-features = false }
 orml-nft = { git = "https://github.com/starkleytech/open-runtime-module-library", branch = "master", default-features = false }
 nft-factory-pallet = { git = 'https://github.com/starkleytech/nft-factory-pallet', branch = 'master', default-features = false }
+
+#Bridge
+chainbridge = { git = 'https://github.com/starkleytech/chainbridge-substrate', branch = 'main', default-features = false }
+bridge-pallet = { git = 'https://github.com/starkleytech/bridge-pallet', branch = 'main', default-features = false }
+
 
 
 [features]
@@ -79,6 +88,9 @@ std = [
     'frame-system-rpc-runtime-api/std',
     'pallet-aura/std',
     'pallet-balances/std',
+    "pallet-contracts/std",
+	"pallet-contracts-primitives/std",
+	"pallet-contracts-rpc-runtime-api/std",
     'pallet-grandpa/std',
     'pallet-randomness-collective-flip/std',
     'pallet-sudo/std',
@@ -96,7 +108,10 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    "sp-io/std",
 	"pallet-atomic-swap/std",
 	"orml-nft/std",
     'nft-factory-pallet/std',
+    'chainbridge/std',
+    'bridge-pallet/std'
 ]
