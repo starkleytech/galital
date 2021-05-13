@@ -98,9 +98,9 @@ structure_message() {
 # room_id: !fsfSRjgjBWEWffws:matrix.parity.io
 # access_token: see https://matrix.org/docs/guides/client-server-api/
 # Usage: send_message $body (json formatted) $room_id $access_token
-send_message() {
-curl -XPOST -d "$1" "https://matrix.parity.io/_matrix/client/r0/rooms/$2/send/m.room.message?access_token=$3"
-}
+#send_message() {
+#curl -XPOST -d "$1" "https://matrix.parity.io/_matrix/client/r0/rooms/$2/send/m.room.message?access_token=$3"
+#}
 
 # Check for runtime changes between two commits. This is defined as any changes
 # to bin/node/src/runtime, frame/ and primitives/sr_* trees.

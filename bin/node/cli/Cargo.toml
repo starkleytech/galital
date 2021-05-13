@@ -1,6 +1,6 @@
 [package]
 name = "galital"
-version = "2.0.0"
+version = "2.0.1"
 authors = ['Starkley Tech <contact@starkleytech.com>']
 description = 'Galital substrate based node'
 build = "build.rs"
