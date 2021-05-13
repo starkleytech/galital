@@ -3,7 +3,7 @@
   "id": "galital",
   "chainType": "Live",
   "bootNodes": [
-    "/dns/0.galital-testnet.starkleytech.com/tcp/30333/p2p/ 12D3KooWMinm21SJzzuKfwshCj7c1xqsqDBUdVV4aciUHneFtnZ1"
+    "/dns/0.galital-testnet.starkleytech.com/tcp/30333/p2p/12D3KooWMinm21SJzzuKfwshCj7c1xqsqDBUdVV4aciUHneFtnZ1"
   ],
   "telemetryEndpoints": [
     [
