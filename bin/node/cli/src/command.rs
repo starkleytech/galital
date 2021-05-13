@@ -16,16 +16,18 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-use crate::{chain_spec, service, Cli, Subcommand};
-use node_executor::Executor;
-use node_runtime::{Block, RuntimeApi};
+use crate::{chain_spec, service};
+use crate::cli::{Cli, Subcommand};
+use galital_runtime::{Block, RuntimeApi};
 use sc_cli::{Result, SubstrateCli, RuntimeVersion, Role, ChainSpec};
 use sc_service::PartialComponents;
 use crate::service::new_partial;
+use crate::service::Executor;
+
 
 impl SubstrateCli for Cli {
 	fn impl_name() -> String {
-		"Substrate Node".into()
+		"🌑 Galital".into()
 	}
 
 	fn impl_version() -> String {
@@ -41,7 +43,7 @@ impl SubstrateCli for Cli {
 	}
 
 	fn support_url() -> String {
-		"https://github.com/paritytech/substrate/issues/new".into()
+		"https://github.com/starkleytech/galital/issues/new".into()
 	}
 
 	fn copyright_start_year() -> i32 {
@@ -54,7 +56,7 @@ impl SubstrateCli for Cli {
 				"" => return Err("Please specify which chain you want to run, e.g. --dev or --chain=local".into()),
 				"dev" => Box::new(chain_spec::development_config()),
 				"local" => Box::new(chain_spec::local_testnet_config()),
-				"fir" | "flaming-fir" => Box::new(chain_spec::flaming_fir_config()?),
+				"galital" | "tal" => Box::new(chain_spec::galital_config()?),
 				"staging" => Box::new(chain_spec::staging_testnet_config()),
 				path => Box::new(chain_spec::ChainSpec::from_json_file(
 					std::path::PathBuf::from(path),
@@ -64,7 +66,7 @@ impl SubstrateCli for Cli {
 	}
 
 	fn native_runtime_version(_: &Box<dyn ChainSpec>) -> &'static RuntimeVersion {
-		&node_runtime::VERSION
+		&galital_runtime::VERSION
 	}
 }
 

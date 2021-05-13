@@ -27,23 +27,6 @@
 //! that are meant to be passed through the `wasm-bindgen` utility and called from JavaScript.
 //! Despite its name the produced WASM can theoretically also be used from NodeJS, although this
 //! hasn't been tested.
-
-#![warn(missing_docs)]
-
 pub mod chain_spec;
-
-#[macro_use]
-mod service;
-#[cfg(feature = "browser")]
-mod browser;
-#[cfg(feature = "cli")]
-mod cli;
-#[cfg(feature = "cli")]
-mod command;
-
-#[cfg(feature = "browser")]
-pub use browser::*;
-#[cfg(feature = "cli")]
-pub use cli::*;
-#[cfg(feature = "cli")]
-pub use command::*;
+pub mod service;
+pub mod rpc;
