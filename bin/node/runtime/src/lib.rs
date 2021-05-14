@@ -999,7 +999,7 @@ impl pallet_society::Config for Runtime {
 }
 
 parameter_types! {
-	pub const MinVestedTransfer: Balance = 100 * DOLLARS;
+	pub const MinVestedTransfer: Balance = 1 * CENTS;
 }
 
 impl pallet_vesting::Config for Runtime {
