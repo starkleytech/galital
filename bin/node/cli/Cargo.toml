@@ -72,7 +72,7 @@ sc-service = { version = "0.9.0", default-features = false, git = "https://githu
 sc-tracing = { version = "3.0.0", git = "https://github.com/starkleytech/substrate", branch = "master"  }
 sc-telemetry = { version = "3.0.0", git = "https://github.com/starkleytech/substrate", branch = "master"  }
 sc-authority-discovery = { version = "0.9.0", git = "https://github.com/starkleytech/substrate", branch = "master"  }
-jsonrpc-core = "15.1.0"
+jsonrpc-core = "18.0.0"
 pallet-contracts-rpc = { version = "3.0.0", git = "https://github.com/starkleytech/substrate", branch = "master"  }
 pallet-mmr-rpc = { version = "3.0.0", git = "https://github.com/starkleytech/substrate", branch = "master"  }
 pallet-transaction-payment-rpc = { version = "3.0.0", git = "https://github.com/starkleytech/substrate", branch = "master"  }
